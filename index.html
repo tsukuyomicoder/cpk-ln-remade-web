@@ -7,12 +7,25 @@
         body {
             font-family: Arial, sans-serif; /* Đổi font chữ cho dễ nhìn */
             text-align: center;            /* Căn giữa toàn bộ nội dung */
-            background-color: #f0f0f0;    /* Màu nền xám nhạt */
+            background-color: #EAE4D3;    /* Màu nền xám nhạt */
             padding-top: 50px;
         }
 
+        /* Chế độ mặc định (Light Mode) */
+        body {
+            transition: background-color 0.5s, color 0.5s; /* Hiệu ứng đổi màu mượt mà */
+            background-color: #EAE4D3;
+            color: black;
+        }
+
+        /* Khi body có thêm class "dark-theme" */
+        body.dark-theme {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
         h1 {
-            color: #2c3e50;               /* Màu xanh đen sang trọng */
+            color: #0f77de;               /* Màu xanh đen sang trọng */
             text-transform: uppercase;     /* Viết hoa toàn bộ tiêu đề */
         }
 
@@ -33,19 +46,83 @@
         button:hover {
             background-color: #2ecc71;    /* Đổi màu khi di chuột qua */
         }
+        
+        .muc-luc {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            margin: 20px auto; /* Căn giữa bảng mục lục */
+        }
+
+        .muc-luc h2 {
+            text-align: center;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .muc-luc ul {
+            list-style-type: none; /* Bỏ dấu chấm đầu dòng */
+            padding: 0;
+        }
+
+        .muc-luc li {
+            margin: 10px 0;
+            border-bottom: 1px dashed #ccc; /* Tạo đường gạch đứt giữa các dòng */
+            padding-bottom: 5px;
+        }
+
+        .muc-luc li:last-child {
+            border-bottom: none; /* Dòng cuối không cần gạch dưới */
+        }
+
+        .muc-luc a {
+            text-decoration: none; /* Bỏ gạch chân mặc định của link */
+            color: #3498db;        /* Màu xanh dương dễ nhìn */
+            font-weight: bold;
+            display: block;        /* Giúp cả dòng đều có thể click được */
+            transition: 0.3s;
+        }
+
+        .muc-luc a:hover {
+            color: #2c3e50;        /* Đổi màu khi di chuột vào */
+            padding-left: 10px;    /* Hiệu ứng nhích sang phải nhẹ */
+        }
     </style>
 </head>
+
+<script>
+function toggleDarkMode() {
+    // Lệnh này sẽ tự động thêm/xóa class "dark-theme" vào thẻ <body>
+    document.body.classList.toggle("dark-theme");
+}
+</script>
+
 <body>
 
     <h1>ハローーーーーー　＝D</h1>
     
     <p>welcome to osu!</p>
 
-    <img src="yes.jpg" alt="Con mèo nhà mình">
-
     <button onclick="alert('yo u clicked me')">
         djasodjasoidjaoidjioa
-    </button>
+    </button><br><br>
 
+    <a href="chapter1.html">
+    <button>Chương 1</button></a><br><br>
+
+    <button onclick="toggleDarkMode()">Đổi màu nền</button>
 </body>
+
+<div class="muc-luc">
+    <h2>Danh sách các chương</h2>
+    <ul>
+        <a href="chapter1.html">Chương 1</a><br>
+        <a href="chapter2.html">Chương 2</a><br>
+        <a href="chapter3.html">Chương 3</a><br>
+        <a href="chapter4.html">Chương 4</a><br>
+        <a href="chapter5.html">Chương 5</a>
+    </ul>
+</div>
 </html>
