@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>ハローーー >.<</title>
+    <link rel="icon" type="image/png" href="icon.png">
     <style>
         /* Đây là nơi viết CSS */
         body {
@@ -46,6 +47,7 @@
         button:hover {
             background-color: #2ecc71;    /* Đổi màu khi di chuột qua */
         }
+<<<<<<< HEAD
         
         .muc-luc {
             background-color: #f9f9f9;
@@ -88,6 +90,79 @@
         .muc-luc a:hover {
             color: #2c3e50;        /* Đổi màu khi di chuột vào */
             padding-left: 10px;    /* Hiệu ứng nhích sang phải nhẹ */
+=======
+                /* Tổng thể thanh Navbar */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 10px 0;
+            
+            /* ĐÂY LÀ PHẦN QUAN TRỌNG: Giữ thanh ở trên cùng khi cuộn */
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Đảm bảo nó luôn nằm trên các nội dung khác */
+        }
+        
+        /* Căn chỉnh các thành phần nằm ngang */
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        /* Định dạng Logo */
+        .nav-logo a {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #2c3e50;
+        }
+        
+        /* Định dạng Menu */
+        .nav-menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        /* Định dạng thanh Search */
+        .nav-search input {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+        
+        .nav-search button {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-left: none;
+            background: #f8f9fa;
+            cursor: pointer;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        /* Nút Đăng nhập/Đăng ký */
+        .btn-login {
+            background: none;
+            border: none;
+            color: #3498db;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        .btn-register {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+>>>>>>> f51f42a810727638f08fec1d05eac8b5997eaf95
         }
     </style>
 </head>
@@ -100,6 +175,29 @@ function toggleDarkMode() {
 </script>
 
 <body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">📖 LN-Station</a>
+            </div>
+    
+            <nav class="nav-menu">
+                <a href="index.html">Trang chủ</a>
+                <a href="the-loai.html">Thể loại</a>
+                <a href="bang-xep-hang.html">BXH</a>
+            </nav>
+    
+            <div class="nav-search">
+                <input type="text" placeholder="Tìm truyện...">
+                <button>🔍</button>
+            </div>
+    
+            <div class="nav-auth">
+                <button class="btn-login">Đăng nhập</button>
+                <button class="btn-register">Đăng ký</button>
+            </div>
+        </div>
+    </header>
 
     <h1>ハローーーーーー　＝D</h1>
     
@@ -114,6 +212,7 @@ function toggleDarkMode() {
 
     <button onclick="toggleDarkMode()">Đổi màu nền</button>
 </body>
+<<<<<<< HEAD
 
 <div class="muc-luc">
     <h2>Danh sách các chương</h2>
@@ -126,3 +225,6 @@ function toggleDarkMode() {
     </ul>
 </div>
 </html>
+=======
+</html>
+>>>>>>> f51f42a810727638f08fec1d05eac8b5997eaf95
