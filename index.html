@@ -47,7 +47,6 @@
         button:hover {
             background-color: #2ecc71;    /* Đổi màu khi di chuột qua */
         }
-<<<<<<< HEAD
         
         .muc-luc {
             background-color: #f9f9f9;
@@ -90,11 +89,11 @@
         .muc-luc a:hover {
             color: #2c3e50;        /* Đổi màu khi di chuột vào */
             padding-left: 10px;    /* Hiệu ứng nhích sang phải nhẹ */
-=======
+        }
                 /* Tổng thể thanh Navbar */
         .navbar {
-            background-color: #ffffff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: rgb(237, 237, 237);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 10px 0;
             
             /* ĐÂY LÀ PHẦN QUAN TRỌNG: Giữ thanh ở trên cùng khi cuộn */
@@ -105,7 +104,7 @@
         
         /* Căn chỉnh các thành phần nằm ngang */
         .nav-container {
-            max-width: 1200px;
+            max-width: 1920px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -162,7 +161,83 @@
             padding: 8px 15px;
             border-radius: 5px;
             cursor: pointer;
->>>>>>> f51f42a810727638f08fec1d05eac8b5997eaf95
+        }
+        .novel-card {
+            display: flex; /* Kích hoạt Flexbox để nằm ngang */
+            background-color: #fff9d7;
+            border: 1px solid #000000;
+            border-radius: 20px;
+            overflow: hidden;
+            max-width: 1440px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Phần ảnh bên trái */
+        .novel-cover {
+            flex: 1; /* Chiếm khoảng 1/3 hoặc tỉ lệ linh hoạt */
+            min-width: 250px;
+        }
+
+        .novel-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Giúp ảnh không bị méo khi co giãn */
+        }
+
+        /* Phần nội dung bên phải */
+        .novel-content {
+            flex: 2; /* Chiếm phần còn lại (khoảng 2/3) */
+            padding: 20px;
+            display: flex;
+            flex-direction: column; /* Xếp tiêu đề và danh sách chương theo chiều dọc */
+            justify-content: space-between; /* Đẩy danh sách chương xuống dưới cùng nếu cần */
+        }
+
+        .novel-title {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .novel-title h2 {
+            text-size-adjust: 123;
+        }
+
+        .novel-description {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Danh sách chương */
+        .novel-chapters {
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        .novel-chapters h3 {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .novel-chapters ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .novel-chapters li {
+            margin-bottom: 5px;
+        }
+
+        .novel-chapters a {
+            text-decoration: none;
+            color: #3498db;
+            font-size: 0.9em;
+        }
+
+        .novel-chapters a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -178,7 +253,7 @@ function toggleDarkMode() {
     <header class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html">📖 LN-Station</a>
+                <a href="index.html">📖Shireky's personal blog</a>
             </div>
     
             <nav class="nav-menu">
@@ -200,31 +275,28 @@ function toggleDarkMode() {
     </header>
 
     <h1>ハローーーーーー　＝D</h1>
-    
-    <p>welcome to osu!</p>
 
-    <button onclick="alert('yo u clicked me')">
-        djasodjasoidjaoidjioa
-    </button><br><br>
+    <div class="novel-card">
+        <div class="novel-cover">
+            <img src="CPKbooth.jpg">
+        </div>
 
-    <a href="chapter1.html">
-    <button>Chương 1</button></a><br><br>
-
+        <div class="novel-content">
+            <div class="novel-header">
+                <h2 class="novel-title">超かぐや姫！</h2>
+                <p class="novel-description">Đây là phần mô tả ngắn gọn về nội dung bộ truyện. Bạn có thể viết tóm tắt cốt truyện ở đây...</p>
+            </div>
+            
+            <div class="novel-chapters">
+                <h3>Danh sách chương</h3>
+                <ul>
+                    <li><a href="#">Chương 1: Sự khởi đầu</a></li>
+                    <li><a href="#">Chương 2: Cuộc gặp gỡ định mệnh</a></li>
+                    <li><a href="#">Chương 3: Sức mạnh thức tỉnh</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <button onclick="toggleDarkMode()">Đổi màu nền</button>
 </body>
-<<<<<<< HEAD
-
-<div class="muc-luc">
-    <h2>Danh sách các chương</h2>
-    <ul>
-        <a href="chapter1.html">Chương 1</a><br>
-        <a href="chapter2.html">Chương 2</a><br>
-        <a href="chapter3.html">Chương 3</a><br>
-        <a href="chapter4.html">Chương 4</a><br>
-        <a href="chapter5.html">Chương 5</a>
-    </ul>
-</div>
 </html>
-=======
-</html>
->>>>>>> f51f42a810727638f08fec1d05eac8b5997eaf95
